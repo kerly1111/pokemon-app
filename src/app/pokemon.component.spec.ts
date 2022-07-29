@@ -38,4 +38,5 @@ describe('PokemonComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('pokemon-app app is running!');
   });*/
+
 });

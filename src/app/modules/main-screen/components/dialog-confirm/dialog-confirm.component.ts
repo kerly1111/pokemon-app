@@ -14,11 +14,14 @@ export interface DialogConfirmInterface {
 })
 export class DialogConfirmComponent {
 
+  successResult: boolean;
+
   constructor(
     public dialogRef: MatDialogRef<DialogConfirmComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogConfirmInterface) {}
 
   onNoClick(): void {
+    this.successResult = false;
     this.dialogRef.close();
   }
 }

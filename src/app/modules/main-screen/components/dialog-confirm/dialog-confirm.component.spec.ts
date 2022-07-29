@@ -7,6 +7,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from "@angular/material/dialog";
 import {MatSliderModule} from "@angular/material/slider";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {By} from "@angular/platform-browser";
 
 describe('DialogConfirmComponent', () => {
   let component: DialogConfirmComponent;
@@ -39,5 +40,11 @@ describe('DialogConfirmComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should close modal', () => {
+    const btnElement = fixture.debugElement.query(By.css('#btnCancel'));
+    btnElement.nativeElement.click();
+    expect(component.successResult).toBeFalse();
   });
 });

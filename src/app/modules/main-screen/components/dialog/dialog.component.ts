@@ -40,18 +40,7 @@ export class DialogComponent implements OnInit {
     ).subscribe({
       complete: () => {
         if(!!this.data.idPokemon){
-          this.pokemonService.findById(this.data.idPokemon).subscribe((response: PokemonVo) => {
-            this.requestForm.patchValue({
-              id: response.id,
-              name: response.name,
-              image: response.image,
-              attack: response.attack,
-              defense: response.defense,
-              hp: response.hp,
-              type: response.type,
-            });
-            this.new = false;
-          })
+          this.findPokemon();
         }
       }
     })
@@ -68,6 +57,21 @@ export class DialogComponent implements OnInit {
       type: new FormControl(undefined, [Validators.required])
     });
     this.new = true;
+  }
+
+  findPokemon() {
+    this.pokemonService.findById(this.data.idPokemon).subscribe((response: PokemonVo) => {
+    this.requestForm.patchValue({
+      id: response.id,
+      name: response.name,
+      image: response.image,
+      attack: response.attack,
+      defense: response.defense,
+      hp: response.hp,
+      type: response.type,
+    });
+    this.new = false;
+    });
   }
 
   rangeAttack(value: number) {
@@ -96,6 +100,7 @@ export class DialogComponent implements OnInit {
   }
 
   onNoClick(): void {
+    this.successResult = false;
     this.dialogRef.close();
   }
 

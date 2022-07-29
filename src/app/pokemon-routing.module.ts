@@ -1,8 +1,7 @@
 import {RouterModule, Routes} from "@angular/router";
-import {AdminPokemonComponent} from "./modules/main-screen/components/admin-pokemon/admin-pokemon.component";
 import {NgModule} from "@angular/core";
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     loadChildren: () =>import(`./modules/main-screen/main.module`)
