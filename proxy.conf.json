@@ -1,0 +1,7 @@
+{
+  "/pokemonServices": {
+    "target": "https://bp-pokemons.herokuapp.com",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

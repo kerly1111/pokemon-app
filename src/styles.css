@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap";
+@import "../node_modules/bootstrap-icons";
+@import "~font-awesome/css/font-awesome.min.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.pk-space {
+  padding-top: 3%;
+}
+.pk-color-header {
+  background: #925aea;
+  color: #ffffff;
+}
+.btn-pk-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #712cdc;
+  --bs-btn-border-color: #712cdc;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #5e2cdc;
+  --bs-btn-hover-border-color: #5e2cdc;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #5e2cdc;
+  --bs-btn-active-border-color: #5e2cdc;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #712cdc;
+  --bs-btn-disabled-border-color: #712cdc;
+  --bs-btn-border-radius: 0.2rem;
+  margin: 4px 4px;
+}
+.pk-search span {
+  background: #ffffff; border-right: 0px solid white;
+}
+.pk-search input {
+  border-left: 0px solid white;
+}
+.pk-btn-action {
+  color: #5e2cdc;
+}
+.pk-btn-action:hover {
+  color: #490f93;
+}
+.pk-text-vc {
+  align-items: center;
+  display: flex;
+}
+.mat-slider.mat-accent .mat-slider-track-fill, .mat-slider.mat-accent .mat-slider-thumb, .mat-slider.mat-accent .mat-slider-thumb-label {
+  background-color: #712cdc;
+}
+.success-pk-color {
+  color: #ffffff;
+  background-color: #1d932b;
+}
+.error-pk-color {
+  color: #ffffff;
+  background-color: #a93333;
+  white-space: pre-wrap;
+}
+.info-pk-color {
+  color: #ffffff;
+  background-color: #1d932b;
+}
+.warning-pk-color {
+  color: #ffffff;
+  background-color: #1d932b;
+}
